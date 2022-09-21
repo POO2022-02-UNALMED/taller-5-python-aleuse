@@ -53,11 +53,11 @@ class Animal:
 
     @staticmethod
     def totalPorTipo():
-        cadena = (f"Mamiferos: {len(zooAnimales.mamifero.Mamifero.getListado())} \nAves: {len(zooAnimales.ave.Ave.getListado())} \nReptiles: {len(zooAnimales.reptil.Reptil.getListado())} \nPeces: {len(zooAnimales.pez.Pez.getListado())} \nAnfibios {len(zooAnimales.anfibio.Anfibio.getListado())}")
+        cadena = (f"Mamiferos: {len(zooAnimales.mamifero.Mamifero.getListado())} \n Aves: {len(zooAnimales.ave.Ave.getListado())} \n Reptiles: {len(zooAnimales.reptil.Reptil.getListado())} \n Peces: {len(zooAnimales.pez.Pez.getListado())} \n Anfibios {len(zooAnimales.anfibio.Anfibio.getListado())}")
         return cadena
 
     def toString(self):
-        if self.getZona() != None:
+        if Animal.getZona() != None:
             return (f"Mi nombre es {self.getNombre()}, tengo una edad de {self.getEdad()}, habito en {self.getHabitat()} y mi genero es {self.getGenero()}, la zona en la que me ubico es {self.getZona()}, en el zoo {self.getZona().getZoo().getNombre()}")
         else:
             return (f"Mi nombre es {self.getNombre()}, tengo una edad de {self.getEdad()}, habito en {self.getHabitat()} y mi genero es {self.getGenero()}")
