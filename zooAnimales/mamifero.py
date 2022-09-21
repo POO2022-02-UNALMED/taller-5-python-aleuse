@@ -11,7 +11,7 @@ class Mamifero(Animal):
         self.setPelaje(pelaje)
         self.setPatas(patas)
         Mamifero._listado.append(self)
-        super.setTotalAnimales(super.getTotalAnimales() + 1)
+        Animal.setTotalAnimales(Animal.getTotalAnimales() + 1)
 
     @classmethod
     def getListado(cls):
@@ -38,10 +38,10 @@ class Mamifero(Animal):
 
     @staticmethod
     def crearCaballo(nombre, edad, genero):
-        caballos += 1
+        Mamifero.caballos += 1
         return Mamifero(nombre, edad, "pradera", genero, True, 4)
 
     @staticmethod
     def crearLeon(nombre, edad, genero):
-        leones += 1
+        Mamifero.leones += 1
         return Mamifero(nombre, edad, "selva", genero, True, 4)

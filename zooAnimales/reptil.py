@@ -11,7 +11,7 @@ class Reptil(Animal):
         self.setColorEscamas(colorEscamas)
         self.setLargoCola(largoCola)
         Reptil._listado.append(self)
-        super.setTotalAnimales(super.getTotalAnimales() + 1)
+        Animal.setTotalAnimales(Animal.getTotalAnimales() + 1)
 
     @classmethod
     def getListado(cls):
@@ -27,10 +27,10 @@ class Reptil(Animal):
     def setColorEscamas(self, colorEscamas):
         self._colorEscamas = colorEscamas
 
-    def setLargoCola(self):
+    def getLargoCola(self):
         return self._largoCola
 
-    def getLargoCola(self, largoCola):
+    def setLargoCola(self, largoCola):
         self._largoCola = largoCola
 
     def cantidadReptiles():
@@ -41,10 +41,10 @@ class Reptil(Animal):
 
     @staticmethod
     def crearIguana(nombre, edad, genero):
-        iguanas += 1
+        Reptil.iguanas += 1
         return Reptil(nombre, edad, "humedal", genero, "verde", 3)
 
     @staticmethod
     def crearSerpiente(nombre, edad, genero):
-        serpientes += 1
+        Reptil.serpientes += 1
         return Reptil(nombre, edad, "jungla", genero, "blanco", 1)

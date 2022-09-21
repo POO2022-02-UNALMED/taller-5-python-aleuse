@@ -11,7 +11,7 @@ class Pez(Animal):
         self.setColorEscamas(colorEscamas)
         self.setCantidadAletas(cantidadAletas)
         Pez._listado.append(self)
-        super.setTotalAnimales(super.getTotalAnimales() + 1)
+        Animal.setTotalAnimales(Animal.getTotalAnimales() + 1)
 
     @classmethod
     def getListado(cls):
@@ -41,10 +41,10 @@ class Pez(Animal):
 
     @staticmethod
     def crearSalmon(nombre, edad, genero):
-        salmones += 1
+        Pez.salmones += 1
         return Pez(nombre, edad, "oceano", genero, "rojo", 6)
 
     @staticmethod
     def crearBacalao(nombre, edad, genero):
-        bacalaos += 1
+        Pez.bacalaos += 1
         return Pez(nombre, edad, "oceano", genero, "gris", 6)

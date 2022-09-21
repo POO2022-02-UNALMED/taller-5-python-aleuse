@@ -1,4 +1,5 @@
-from zooAnimales import anfibio, ave, mamifero, pez, reptil
+import gestion
+import zooAnimales
 class Animal:
     _totalAnimales = 0
     def __init__(self, nombre, edad, habitat, genero, zona = None):
@@ -52,7 +53,7 @@ class Animal:
 
     @staticmethod
     def totalPorTipo():
-        cadena = f"Mamiferos: {len(mamifero.getListado())} \nAves: {len(ave.getListado())} \nReptiles: {len(reptil.getListado())} \nPeces: {len(pez.getListado())} \nAnfibios {len(anfibio.getListado())}"
+        cadena = f"Mamiferos: {len(Mamifero.getListado())} \nAves: {len(Ave.getListado())} \nReptiles: {len(Reptil.getListado())} \nPeces: {len(Pez.getListado())} \nAnfibios {len(Anfibio.getListado())}"
         return cadena
 
     def __str__(self):

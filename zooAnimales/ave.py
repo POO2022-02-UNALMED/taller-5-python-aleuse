@@ -10,7 +10,7 @@ class Ave(Animal):
         self.setGenero(genero)
         self.setColorPlumas(colorPlumas)
         Ave._listado.append(self)
-        super.setTotalAnimales(super.getTotalAnimales() + 1)
+        Animal.setTotalAnimales(Animal.getTotalAnimales() + 1)
 
     @classmethod
     def getListado(cls):
@@ -34,10 +34,10 @@ class Ave(Animal):
 
     @staticmethod
     def crearHalcon(nombre, edad, genero):
-        halcones += 1
+        Ave.halcones += 1
         return Ave(nombre, edad, "montanas", genero, "cafe glorioso")
 
     @staticmethod
     def crearAguila(nombre, edad, genero):
-        aguilas += 1
+        Ave.aguilas += 1
         return Ave(nombre, edad, "montanas", genero, "blanco y amarillo")
