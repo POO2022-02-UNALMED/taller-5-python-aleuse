@@ -1,4 +1,3 @@
-from gestion.zona import Zona
 from zooAnimales import anfibio, ave, mamifero, pez, reptil
 class Animal:
     _totalAnimales = 0
