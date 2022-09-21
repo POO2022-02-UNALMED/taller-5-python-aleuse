@@ -8,7 +8,7 @@ class Animal:
         self.setHabitat(habitat)
         self.setGenero(genero)
         self.setZona(zona)
-        _totalAnimales += 1
+        Animal.setTotalAnimales(Animal.getTotalAnimales() + 1)
 
     @classmethod
     def getTotalAnimales(cls):
@@ -53,11 +53,11 @@ class Animal:
 
     @staticmethod
     def totalPorTipo():
-        cadena = f"Mamiferos: {len(Mamifero.getListado())} \nAves: {len(Ave.getListado())} \nReptiles: {len(Reptil.getListado())} \nPeces: {len(Pez.getListado())} \nAnfibios {len(Anfibio.getListado())}"
+        cadena = (f"Mamiferos: {len(zooAnimales.mamifero.Mamifero.getListado())} \nAves: {len(zooAnimales.ave.Ave.getListado())} \nReptiles: {len(zooAnimales.reptil.Reptil.getListado())} \nPeces: {len(zooAnimales.pezPez.getListado())} \nAnfibios {len(zooAnimales.anfibio.Anfibio.getListado())}")
         return cadena
 
-    def __str__(self):
+    def toString(self):
         if len(self.getZona()) != 0:
-            return f"Mi nombre es {self.getNombre()}, tengo una edad de {self.getEdad()}, habito en {self.getHabitat()} y mi genero es {self.getGenero()}, la zona en la que me ubico es {self.getZona()}, en el zoo {self.getZona().getZoo().getNombre()}"
+            return (f"Mi nombre es {self.getNombre()}, tengo una edad de {self.getEdad()}, habito en {self.getHabitat()} y mi genero es {self.getGenero()}, la zona en la que me ubico es {self.getZona()}, en el zoo {self.getZona().getZoo().getNombre()}")
         else:
-            return f"Mi nombre es {self.getNombre()}, tengo una edad de {self.getEdad()}, habito en {self.getHabitat()} y mi genero es {self.getGenero()}"
+            return (f"Mi nombre es {self.getNombre()}, tengo una edad de {self.getEdad()}, habito en {self.getHabitat()} y mi genero es {self.getGenero()}")
